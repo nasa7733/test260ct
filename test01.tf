@@ -4,5 +4,6 @@ provider "google" {
 }
 resource  "google_compute_instance" "test" {
   name = "mytestvm"
+  machine_type ="n1-standard-1"
 }
 
