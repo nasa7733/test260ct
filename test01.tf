@@ -3,6 +3,6 @@ provider "google" {
   region ="asia-east1"
 }
 resource  "google_compute_instance" "test" {
-  name = 'mytestvm'
+  name = "mytestvm"
 }
 
