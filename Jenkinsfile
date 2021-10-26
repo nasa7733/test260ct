@@ -13,7 +13,7 @@ pipeline {
   stage('checkout')
   {
    steps {
-   git branch: 'master', url: 'https://github.com/nasa7733/Terraform_new.git'
+   git branch: 'master', url: 'https://github.com/nasa7733/test260ct.git'
    }
   }
 
@@ -29,7 +29,7 @@ pipeline {
   stage (provision_infrastructure){
    steps {
     sh 'terraform init'
-    sh 'terraform plan'
+   // sh 'terraform plan'
    }
   }
  }
