@@ -29,7 +29,7 @@ pipeline {
     
         stage ('build infrastructure') {
             steps {
-                sh 'terraform $TF_ACTIONS -var-file=./env_vars/$TF_VARS.tfvars $TF_APPROVE'
+                sh 'terraform $TF_ACTIONS $TF_APPROVE'
             }
         }
     }
