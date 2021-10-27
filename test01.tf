@@ -1,5 +1,5 @@
 provider "google" {
-  project = "miprodlabs"
+  project = "midevops"
   region ="asia-east1"
   zone = "asia-east1-a"
 }
