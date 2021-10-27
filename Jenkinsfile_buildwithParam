@@ -17,7 +17,7 @@ pipeline {
             sh 'echo $gcpkey > ./creds/creds.json'
             sh 'cd ./creds'
             sh 'ls'
-            sh 'more creds.json'
+            sh 'more ./creds/creds.json'
         }
             
         }
