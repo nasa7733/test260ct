@@ -8,7 +8,7 @@ resource  "google_compute_instance" "test" {
   machine_type = "n1-standard-1"
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = "debian-10-buster-v20210916"
     }
   }
   network_interface {
