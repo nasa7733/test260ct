@@ -15,6 +15,7 @@ pipeline {
         steps {
             sh 'mkdir -p creds'
             sh 'echo $gcpkey > ./creds/creds.json'
+            sh 'cd ./creds'
             sh 'more creds.json'
         }
             
