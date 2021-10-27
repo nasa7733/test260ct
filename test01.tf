@@ -1,6 +1,7 @@
 provider "google" {
   project = "miprodlabs"
   region ="asia-east1"
+  zone = "asia-east1-a"
 }
 resource  "google_compute_instance" "test" {
   name = "mytestvm"
