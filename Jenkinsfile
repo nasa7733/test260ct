@@ -4,13 +4,13 @@ pipeline {
         vamsi_cloud_creds = credentials('gcp_vamsi-cloud_gce_creator')
     }
     stages {
-        
-        # stage ('checkout'){
-        #    steps {
-        #        git branch: 'main', url: 'https://github.com/nasa7733/test260ct.git'
-        #    }
-        #}
-        
+        /*
+         stage ('checkout'){
+            steps {
+                git branch: 'main', url: 'https://github.com/nasa7733/test260ct.git'
+            }
+        }
+        */
         stage('credentails'){
         steps {
             sh 'mkdir -p creds'
