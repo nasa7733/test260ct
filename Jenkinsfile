@@ -2,14 +2,24 @@ pipeline {
     agent any
     
     stages {
-
-        
+     stage ('terraform init') {
+            steps {
+                
+                sh 'terraform init'
+               
+            }
+        }
+     stage ('terraform plan') {
+            steps {
+                
+                sh 'terraform plan'
+               
+            }
+        }
     
         stage ('build infrastructure') {
             steps {
-                sh 'echo test'
-                sh 'terraform init'
-                sh 'terraform plan'
+              
                 sh 'terraform apply --auto-approve'
             }
         }
