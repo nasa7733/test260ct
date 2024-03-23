@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        vamsi_cloud_creds = credentials('gcp_vamsi-cloud_gce_creator')
+        vamsi_cloud_creds = credentials('vamsi-creds')
     }
     stages {
         /*
