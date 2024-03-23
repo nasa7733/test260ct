@@ -1,8 +1,8 @@
 provider "google" {
-  project = "midevops"
+  project = "vamsi-cloud"
   region ="asia-east1"
   zone = "asia-east1-a"
-  //credentials = file("./creds/creds.json")
+  credentials = file("./creds/creds.json")
 }
 resource  "google_compute_instance" "test" {
   name = "mytestvm"
@@ -13,7 +13,8 @@ resource  "google_compute_instance" "test" {
     }
   }
   network_interface {
-   network = "default"
+   network = "vamsi-cloud-vpc"
+   subnetwork = "vamsi-cloud-subnet"
 
  }
 
