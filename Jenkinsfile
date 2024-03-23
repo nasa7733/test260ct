@@ -13,14 +13,13 @@ pipeline {
         */
         stage('credentails'){
         steps {
-            /*
+            
             sh 'mkdir -p creds'
             sh 'echo $vamsi_cloud_creds > ./creds/creds.json'
             sh 'pwd'
             sh 'ls'
             sh 'echo ./creds/creds.json'
-            */
-            sh 'mkdir -p creds'
+          
         }
             
         }
