@@ -5,8 +5,8 @@ provider "google" {
 //  credentials = file("./creds/creds.json")
 }
 resource  "google_compute_instance" "test" {
-  name = "mytestvm"
-  machine_type = "n1-standard-1"
+  name = "nasa-jenkins-test"
+  machine_type = "n2-standard-2"
   boot_disk {
     initialize_params {
       image = "debian-10-buster-v20210916"
