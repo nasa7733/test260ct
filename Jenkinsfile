@@ -1,12 +1,13 @@
 pipeline {
     agent any
     environment {
-        vamsi_cloud_creds = credentials('vamsi-creds')
+       // vamsi_cloud_creds = credentials('vamsi-creds')
     }
     stages {
         /*
          stage ('checkout'){
             steps {
+                sh  'echo $hostname'
                 git branch: 'main', url: 'https://github.com/nasa7733/test260ct.git'
             }
         }
