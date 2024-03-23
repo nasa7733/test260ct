@@ -1,20 +1,23 @@
 pipeline {
     agent any
     environment {
-        gcpkey = credentials('gcpkey')
+        vamsi_cloud_creds = credentials('gcp_vamsi-cloud_gce_creator')
     }
     stages {
         
-         stage ('checkout'){
-            steps {
-                git branch: 'main', url: 'https://github.com/nasa7733/test260ct.git'
-            }
-        }
+        # stage ('checkout'){
+        #    steps {
+        #        git branch: 'main', url: 'https://github.com/nasa7733/test260ct.git'
+        #    }
+        #}
         
         stage('credentails'){
         steps {
             sh 'mkdir -p creds'
-            sh 'echo $gcpkey > ./creds/creds.json'
+            sh 'echo $vamsi_cloud_creds > ./creds/creds.json'
+            sh 'pwd'
+            sh 'ls'
+            sh 'echo ./creds/creds.json'
         }
             
         }
@@ -31,7 +34,7 @@ pipeline {
             steps {
                 sh 'terraform init'
                 sh 'terraform plan'
-                sh 'terraform apply -auto-approve'
+                sh 'terraform apply --auto-approve'
             }
         }
     }
