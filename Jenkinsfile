@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
        // vamsi_cloud_creds = credentials('vamsi-creds')
+        hostname = Nasa
     }
     stages {
         /*
