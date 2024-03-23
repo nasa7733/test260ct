@@ -35,7 +35,7 @@ pipeline {
     
         stage ('build infrastructure') {
             steps {
-                sh 'echo 'test' '
+                sh 'echo test'
                 sh 'terraform init'
                 sh 'terraform plan'
                 sh 'terraform apply --auto-approve'
